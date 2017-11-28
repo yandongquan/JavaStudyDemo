@@ -7,4 +7,5 @@
 
 ##  学习Java实例列表
 
+* [x] [servlet-jsp-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/servlet-jsp-demo)：servlet+jsp整合Demo
 * [x] [SSM-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis整合Demo
