@@ -9,5 +9,31 @@
 
     <!-- 开启包扫描，并注册注解 -->
     <context:component-scan base-package="com.javazhan.*"/>
+    <!-- 引入属性文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 
+    <!-- 配置C3P0连接池 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!-- 数据库连接相关信息 -->
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!-- 配置Hibernate的SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!-- 注入连接池 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置Hibernate属性 -->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop><!-- 是否展示SQL -->
+                <prop key="hibernate.hbm2ddl.auto">update</prop><!-- 是否自动创建表结构 -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+            </props>
+        </property>
+        <!-- 扫描并加载注解过的实体类 -->
+        <property name="packagesToScan" value="com.javazhan.*.model"/>
+    </bean>
 </beans>
