@@ -1,4 +1,4 @@
-package com.javazhan.controller;
+package com.javazhan.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
