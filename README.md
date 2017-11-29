@@ -7,9 +7,10 @@
 
 ##  学习Java实例列表
 * [x] [servlet-jsp-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/servlet-jsp-demo)：servlet+jsp整合Demo
-* [x] [SSM-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis整合Demo
+* [x] [ssh-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：struts+spring+hibernate整合Demo
 * [x] [springmvc-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/springmvc-demo)：springmvc环境Demo
 * [x] [springmvc-maven-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/springmvc-maven-demo)：springmvc maven 整合Demo
+* [x] [ssm-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis整合Demo
 * [x] [dobbox-demo-service](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo服务端Demo
 * [x] [dobbox-demo-web](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo web端Demo
 
