@@ -8,8 +8,8 @@
 
 ##  Learn Java instance list
 
-* [x] [dobbox-demo-service](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo服务端Demo
-* [x] [dobbox-demo-web](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo web端Demo
+* [x] [dobbox-demo-service](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo Server Demo
+* [x] [dobbox-demo-web](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo web Demo
 * [x] [servlet-jsp-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/servlet-jsp-demo)：servlet+jsp Integration Demo
 * [x] [SSM-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis Integration Demo
 
