@@ -10,10 +10,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 @Scope("prototype")
 public class DemoAction extends ActionSupport {
-    /**
-     * Demo
-     * @return
-     */
+
     public String demo() {
         System.out.println("=====================");
         return SUCCESS;
