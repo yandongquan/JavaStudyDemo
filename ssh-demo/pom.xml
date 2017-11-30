@@ -106,13 +106,25 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.42</version>
     </dependency>
-    <!-- C3P0 依赖 -->
+    <!-- 添加连接池druid支持 -->
     <dependency>
-      <groupId>com.mchange</groupId>
-      <artifactId>c3p0</artifactId>
-      <version>0.9.5</version>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.16</version>
     </dependency>
 
+    <!-- 添加日志支持 -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.12</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>ssh-demo</finalName>

@@ -12,12 +12,12 @@
     <!-- 引入属性文件 -->
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
-    <!-- 配置C3P0连接池 -->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <!-- 配置druid连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <!-- 数据库连接相关信息 -->
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="driverClass" value="${jdbc.driverClassName}"/>
-        <property name="user" value="${jdbc.username}"/>
+        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
