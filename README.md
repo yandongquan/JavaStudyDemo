@@ -6,7 +6,6 @@
 
 
 ##  学习Java实例列表
-
 * [x] [servlet-jsp-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/servlet-jsp-demo)：servlet+jsp整合Demo
 * [x] [ssh-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：struts+spring+hibernate整合Demo
 * [x] [springmvc-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/springmvc-demo)：springmvc环境Demo
