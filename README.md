@@ -12,6 +12,8 @@
 * [x] [ssm-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis整合Demo
 * [ ] [dobbox-demo-service](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo服务端Demo
 * [ ] [dobbox-demo-web](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo web端Demo
+* [x] [cas-demo1](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo1)：cas-demo客户端1
+* [x] [cas-demo2](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo2)：cas-demo客户端2
 * [ ] 敬请期待
 
 ##  联系
