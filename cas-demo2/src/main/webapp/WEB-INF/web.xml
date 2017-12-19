@@ -26,7 +26,7 @@
     </init-param>
     <init-param>
       <param-name>serverName</param-name>
-      <param-value>http://localhost:9001</param-value>
+      <param-value>http://localhost:9002</param-value>
     </init-param>
   </filter>
   <filter-mapping>
@@ -43,7 +43,7 @@
     </init-param>
     <init-param>
       <param-name>serverName</param-name>
-      <param-value>http://localhost:9001</param-value>
+      <param-value>http://localhost:9002</param-value>
     </init-param>
   </filter>
   <filter-mapping>

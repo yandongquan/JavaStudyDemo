@@ -7,7 +7,7 @@
     <title>CAS</title>
 </head>
 <body>
-欢迎来到CAS-demo1
+欢迎来到CAS-demo2
 <%=request.getRemoteUser()%>
 </body>
 </html>
