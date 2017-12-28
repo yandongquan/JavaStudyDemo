@@ -14,6 +14,7 @@
 * [x] [SSM-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis Integration Demo
 * [x] [cas-demo1](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo1)：cas-demo client1
 * [x] [cas-demo2](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo2)：cas-demo client2
+* [x] [freemarker-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/freemarker-demo)：freemarker generate static pages
 * [ ] Stay tuned
 
 ##  Contact
