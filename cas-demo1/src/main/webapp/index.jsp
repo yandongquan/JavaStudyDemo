@@ -7,8 +7,7 @@
     <title>CAS</title>
 </head>
 <body>
-欢迎来到CAS-demo1
-<%=request.getRemoteUser()%>
+欢迎来到CAS-demo1<%=request.getRemoteUser()%>
 <a href="http://localhost:9100/cas/logout">退出登录</a>
 </body>
 </html>
