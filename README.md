@@ -10,6 +10,9 @@
 * [x] [springmvc-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/springmvc-demo)：springmvc环境Demo
 * [x] [springmvc-maven-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/springmvc-maven-demo)：springmvc maven 整合Demo
 * [x] [ssm-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/SSM-demo)：Spring+SpringMVC+Mybatis整合Demo
+* [x] [dobbo-demo-parent](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo-demo父类
+* [x] [dobbo-demo-provider](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo-demo提供方
+* [x] [dobbo-demo-consumer](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo-demo消费方
 * [ ] [dobbox-demo-service](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-service)：dobbo服务端Demo
 * [ ] [dobbox-demo-web](https://github.com/yandongquan/JavaStudyDemo/tree/master/dobbox-demo-web)：dobbo web端Demo
 * [x] [cas-demo1](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo1)：cas-demo客户端1
