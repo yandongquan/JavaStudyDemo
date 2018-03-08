@@ -1,16 +1,21 @@
 package com.javakz;
 
+import com.google.gson.JsonObject;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.net.InetAddress;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: yandq
@@ -63,5 +68,57 @@ public class AddIndexTest {
         System.out.println("当前实例状态："+response.status());
     }
 
+    /**
+     * 添加索引
+     * @throws Exception
+     */
+    @Test
+    public void testIndex2() throws Exception {
+        String json = "{" +
+                "\"user\":\"kimchy\"," +
+                "\"postDate\":\"2018-01-30\"," +
+                "\"message\":\"trying out Elasticsearch\"" +
+                "}";
+        IndexResponse response = client.prepareIndex("weibo", "tweet")
+                .setSource(json, XContentType.JSON).get();
+        System.out.println("索引名称："+response.getIndex());
+        System.out.println("类型："+response.getType());
+        System.out.println("文档ID："+response.getId());
+        System.out.println("当前实例状态："+response.status());
+    }
 
+    /**
+     * 添加索引
+     */
+    @Test
+    public void testIndex3()throws Exception{
+        Map<String, Object> json = new HashMap<String, Object>();
+        json.put("user","kimchy");
+        json.put("postDate",new Date());
+        json.put("message","trying out Elasticsearch");
+        IndexResponse response = client.prepareIndex("qq", "tweet")
+                .setSource(json).get();
+        System.out.println("索引名称："+response.getIndex());
+        System.out.println("类型："+response.getType());
+        System.out.println("文档ID："+response.getId());
+        System.out.println("当前实例状态："+response.status());
+    }
+
+    /**
+     * 添加索引
+     */
+    @Test
+    public void testIndex4()throws Exception{
+        JsonObject jsonObject=new JsonObject();
+        jsonObject.addProperty("user", "kimchy");
+        jsonObject.addProperty("postDate", "1989-11-11");
+        jsonObject.addProperty("message", "trying out Elasticsearch");
+
+        IndexResponse response = client.prepareIndex("qq", "tweet")
+                .setSource(jsonObject.toString(),XContentType.JSON).get();
+        System.out.println("索引名称："+response.getIndex());
+        System.out.println("类型："+response.getType());
+        System.out.println("文档ID："+response.getId());
+        System.out.println("当前实例状态："+response.status());
+    }
 }
