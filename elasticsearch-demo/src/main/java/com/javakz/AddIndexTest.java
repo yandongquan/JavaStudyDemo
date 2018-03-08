@@ -25,9 +25,13 @@ import java.util.Map;
  */
 
 public class AddIndexTest {
-    // 服务地址
-    private static String host = "192.168.122.128";
-    // 端口
+    /**
+     * 服务地址
+     */
+    private static String host = "192.168.0.113";
+    /**
+     * 端口
+     */
     private static int port = 9300;
     private static TransportClient client = null;
 
