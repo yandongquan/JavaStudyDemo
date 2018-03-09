@@ -59,6 +59,30 @@ public class QueryTest {
         }
     }
 
+    private static final String ANALYZER = "smartcn";
+
+    /**
+     * smartcn中文分词查询
+     */
+    @Test
+    public void searchSmartcn() {
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch("film2").setTypes("dongzuo");
+        SearchResponse searchResponse = searchRequestBuilder.setQuery(QueryBuilders.matchQuery("title", "星球狼").analyzer(ANALYZER))
+                .setFetchSource(new String[]{"title","price"}, null).execute().actionGet();
+        SearchHits searchHits = searchResponse.getHits();
+        for (SearchHit searchHit:searchHits) {
+            System.out.println(searchHit.getSourceAsString());
+        }
+
+        // 多字段查询
+        SearchResponse searchResponse2 = searchRequestBuilder.setQuery(QueryBuilders.multiMatchQuery("非洲星球", "title", "content").analyzer(ANALYZER))
+                .setFetchSource(new String[]{"title","content"}, null).execute().actionGet();
+        SearchHits searchHits2 = searchResponse2.getHits();
+        for (SearchHit searchHit:searchHits2) {
+            System.out.println(searchHit.getSourceAsString());
+        }
+    }
+
     /**
      * 条件查询高亮
      * @throws Exception
@@ -212,7 +236,7 @@ public class QueryTest {
 
         for(int i=0;i<jsonArray.size();i++){
             JsonObject jo=jsonArray.get(i).getAsJsonObject();
-            IndexResponse response=client.prepareIndex("film", "dongzuo")
+            IndexResponse response=client.prepareIndex("film2", "dongzuo")
                     .setSource(jo.toString(), XContentType.JSON).get();
             System.out.println("索引名称："+response.getIndex());
             System.out.println("类型："+response.getType());
