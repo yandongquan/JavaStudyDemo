@@ -54,7 +54,42 @@ public class TestClusterIndex {
             client.close();
         }
     }
-
+    /**
+     * filter过滤；票价必须少于40
+     * @throws Exception
+     */
+    @Test
+    public void testFilter() throws Exception {
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch("film2").setTypes("dongzuo");
+        QueryBuilder queryBuilder1 = QueryBuilders.matchPhraseQuery("title","战");
+        QueryBuilder queryBuilder2 = QueryBuilders.rangeQuery("price").lte(40);
+        SearchResponse searchResponse = searchRequestBuilder.setQuery(QueryBuilders.boolQuery()
+                .must(queryBuilder1)
+                .filter(queryBuilder2)).execute().actionGet();
+        SearchHits searchHits = searchResponse.getHits();
+        for (SearchHit searchHit:searchHits) {
+            System.out.println(searchHit.getSourceAsString());
+        }
+    }
+    /**
+     * should使用 提高得分
+     * @throws Exception
+     */
+    @Test
+    public void testShould() throws Exception {
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch("film2").setTypes("dongzuo");
+        QueryBuilder queryBuilder1 = QueryBuilders.matchPhraseQuery("title","战");
+        QueryBuilder queryBuilder2 = QueryBuilders.matchPhraseQuery("context","星球");
+        QueryBuilder queryBuilder3 = QueryBuilders.rangeQuery("publishDate").gt("2018-01-01");
+        SearchResponse searchResponse = searchRequestBuilder.setQuery(QueryBuilders.boolQuery()
+                        .must(queryBuilder1)
+                        .should(queryBuilder2)
+                        .should(queryBuilder3)).execute().actionGet();
+        SearchHits searchHits = searchResponse.getHits();
+        for (SearchHit searchHit:searchHits) {
+            System.out.println(searchHit.getScore()+"："+searchHit.getSourceAsString());
+        }
+    }
     /**
      * 模糊查询标题含有“战”
      * @throws Exception
