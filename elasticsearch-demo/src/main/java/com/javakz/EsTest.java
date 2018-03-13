@@ -14,9 +14,13 @@ import java.net.InetAddress;
  * @Modified By:
  */
 public class EsTest {
-    // 服务地址
+    /**
+     * 服务地址
+     */
     private static String host = "192.168.122.128";
-    // 端口
+    /**
+     * 端口
+     */
     private static int port = 9300;
     public static void main(String[] args) throws Exception {
         TransportClient client = new PreBuiltTransportClient(Settings.EMPTY)
