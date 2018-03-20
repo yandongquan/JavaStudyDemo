@@ -18,6 +18,7 @@
 * [x] [cas-demo1](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo1)：cas-demo客户端1
 * [x] [cas-demo2](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo2)：cas-demo客户端2
 * [x] [freemarker-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/freemarker-demo)：freemarker生成静态页面demo
+* [x] [elasticsearch-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/elasticsearch-demo)：elasticsearch操作demo
 * [ ] AngularJS-demo：AngularJS demo
 
 * [ ] 敬请期待
