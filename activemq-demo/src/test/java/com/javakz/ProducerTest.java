@@ -55,8 +55,8 @@ public class ProducerTest {
     public void testTopicProducer() throws JMSException {
         // 1）创建 ConnectionFactory 对象，需要指定服务端 ip 及端口号。
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.0.113:61616");
-        // 2）使用 ConnectionFactory 对象创建一个 Connection 对象。
-        Connection connection = connectionFactory.createConnection();
+        // 2）使用 ConnectionFactory 对象创建一个 Connection 对象。 参数用户名/密码
+        Connection connection = connectionFactory.createConnection("yan","yan");
         // 3）开启连接，调用 Connection 对象的 start 方法。
         connection.start();
         // 4）使用 Connection 对象创建一个 Session 对象。
