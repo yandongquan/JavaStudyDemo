@@ -61,4 +61,18 @@ null值的处理：
 <br>
 8）Include 标签
 <#include "footer.ftl"/>
+
+9）处理Json字符串转对象<br>
+<table>
+    <tr><td>序号</td><td>学号</td><td>姓名</td><td>年龄</td></tr>
+    <#assign jsons = jsonList?eval>
+     <#list jsons as student>
+         <#if student_index % 2 == 0>
+         <tr bgcolor="#556b2f">
+         <#else>
+         <tr bgcolor="#cd5c5c">
+         </#if>
+     <td>${student_index+1}</td><td>${student.studentNo}</td><td>${student.name}</td><td>${student.age}</td></tr>
+     </#list>
+</table>
 </html>

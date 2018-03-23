@@ -1,5 +1,6 @@
 package com.javazhan.controller;
 
+import com.google.gson.Gson;
 import com.javazhan.pojo.Student;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.*;
 
@@ -29,7 +31,6 @@ public class HtmlGenController {
         // 1、从 spring 容器中获得 FreeMarkerConfigurer 对象。
         // 2、从 FreeMarkerConfigurer 对象中获得 Configuration 对象。
         Configuration configuration = freeMarkerConfigurer.getConfiguration();
-        configuration.setDefaultEncoding("utf-8");
         // 3、使用 Configuration 对象获得 Template 对象
         Template template = configuration.getTemplate("hello.ftl");
         // 4、创建数据集
@@ -71,6 +72,9 @@ public class HtmlGenController {
         // 7）Null 值的处理
         root.put("list", null);
 
+        // 9）处理Json字符串转对象
+        root.put("jsonList", new Gson().toJson(list));
+
         // 5、创建输出文件的 Writer 对象。
         Writer out = new BufferedWriter( new OutputStreamWriter( new FileOutputStream("D:/Work/Workspaces/IdeaProjects/Git/JavaStudyDemo/freemaker-spring-demo/src/main/resources/html/GOODS"+id+".html"), "UTF-8"));
         // 下面的会乱码
@@ -78,8 +82,46 @@ public class HtmlGenController {
         // 6、调用模板对象的 process 方法，生成文件。
         template.process(root, out);
         // 7、关闭流。
+        out.flush();
         out.close();
         return "OK";
-
     }
+
+    @RequestMapping("/comment")
+    public void genHtml(HttpServletResponse response)throws Exception {
+        // 1、从 spring 容器中获得 FreeMarkerConfigurer 对象。
+        // 2、从 FreeMarkerConfigurer 对象中获得 Configuration 对象。
+        Configuration configuration = freeMarkerConfigurer.getConfiguration();
+        // 3、使用 Configuration 对象获得 Template 对象
+        Template template = configuration.getTemplate("comment_template.ftl");
+        // 4、创建数据集
+        Map<String, Object> root = new HashMap<String, Object>();
+
+        List<Student> list = new ArrayList<Student>();
+        Student student1 = new Student();
+        student1.setStudentNo("10001");
+        student1.setName("张三");
+        student1.setAge(23);
+        list.add(student1);
+        Student student2 = new Student();
+        student2.setStudentNo("10002");
+        student2.setName("张三2");
+        student2.setAge(24);
+        list.add(student2);
+        Student student3 = new Student();
+        student3.setStudentNo("10003");
+        student3.setName("张三3");
+        student3.setAge(21);
+        list.add(student3);
+        root.put("studentList", list);
+
+        response.setContentType("text/html; charset=" + "UTF-8");
+        Writer out = response.getWriter();
+        // 6、调用模板对象的 process 方法，生成文件。
+        template.process(root, out);
+        // 7、关闭流。
+        out.flush();
+        out.close();
+    }
+
 }
