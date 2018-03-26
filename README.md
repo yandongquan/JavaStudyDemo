@@ -22,6 +22,7 @@
 * [x] [activemq-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-demo)：activemq常用demo
 * [x] [activemq-producer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-producer-spring-demo)：activemq整合Spring demo producer端
 * [x] [activemq-consumer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-consumer-spring-demo)：activemq整合Spring demo consumer端
+* [ ] sso-demo：sso demo
 * [ ] AngularJS-demo：AngularJS demo
 
 * [ ] 敬请期待
