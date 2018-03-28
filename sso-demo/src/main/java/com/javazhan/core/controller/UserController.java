@@ -24,6 +24,15 @@ public class UserController {
     @Autowired
     private UserSv userSv;
 
+    @RequestMapping("/user/login.html")
+    @ResponseBody
+    public String login(String userName, String password) {
+
+        ResponseData responseData = userSv.login(userName, password);
+        String result = new Gson().toJson(responseData);
+        return result;
+    }
+
     @RequestMapping("/user/check/{param}/{type}.html")
     @ResponseBody
     public String checkData(@PathVariable String param, @PathVariable String type) {
@@ -40,34 +49,38 @@ public class UserController {
     @RequestMapping(value="/user/register.html", method= RequestMethod.POST)
     @ResponseBody
     public String register(TUser user) {
-        ResponseData responseData = null;
+        ResponseData responseData = new ResponseData();
         if (checkUser(user, responseData)) {
-            responseData= userSv.createUser(user);
+            responseData= userSv.insertUser(user);
         }
         String result = new Gson().toJson(responseData);
-        return result;
+            return result;
     }
 
     public boolean checkUser(TUser user, ResponseData responseData) {
         if (StringUtils.isBlank(user.getUserName())) {
-            responseData = new ResponseData("2222", "用户名不能为空",null);
+            responseData.setCode("2222");
+            responseData.setMsg("用户名不能为空");
             return false;
         }
         if (StringUtils.isBlank(user.getPassword())) {
-            responseData =  new ResponseData("2222", "密码不能为空",null);
+            responseData.setCode("2222");
+            responseData.setMsg("密码不能为空");
             return false;
         }
         //校验数据是否可用
         ResponseData resultCheck = userSv.checkData(user.getUserName(), 1);
         if ("0000".equals(resultCheck.getCode())) {
-            responseData = new ResponseData("2222", "此用户名已经被使用",null);
+            responseData.setCode("2222");
+            responseData.setMsg("此用户名已经被使用");
             return false;
         }
         //校验电话是否可用
         if (StringUtils.isNotBlank(user.getPhone())) {
             resultCheck = userSv.checkData(user.getPhone(), 2);
             if ("0000".equals(resultCheck.getCode())) {
-                responseData = new ResponseData("2222", "此手机号已经被使用",null);
+                responseData.setCode("2222");
+                responseData.setMsg("此手机号已经被使用");
                 return false;
             }
         }
@@ -75,7 +88,8 @@ public class UserController {
         if (StringUtils.isNotBlank(user.getEmail())) {
             resultCheck = userSv.checkData(user.getEmail(), 3);
             if ("0000".equals(resultCheck.getCode())) {
-                responseData = new ResponseData("2222", "此邮箱已经被使用",null);
+                responseData.setCode("2222");
+                responseData.setMsg("此邮箱已经被使用");
                 return false;
             }
         }

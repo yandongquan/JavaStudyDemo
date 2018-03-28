@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Modified By:
  */
 public interface UserSv {
-    public ResponseData checkData(String param, int type);
-    public ResponseData createUser(TUser user);
+    ResponseData checkData(String param, int type);
+    ResponseData insertUser(TUser user);
+    ResponseData login(String userName, String password);
 }

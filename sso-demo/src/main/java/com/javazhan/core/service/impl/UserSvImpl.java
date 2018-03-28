@@ -7,6 +7,7 @@ import com.javazhan.core.model.dto.TUserExample;
 import com.javazhan.core.model.pojo.ResponseData;
 import com.javazhan.core.service.UserSv;
 import com.javazhan.utils.Md5EncryptUtil;
+import com.javazhan.utils.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,13 +49,21 @@ public class UserSvImpl implements UserSv {
     }
 
     @Override
-    public ResponseData createUser(TUser user) {
+    public ResponseData insertUser(TUser user) {
         // 密码要进行 MD5 加密。
         String md5Pass = Md5EncryptUtil.encryptToMD5(user.getPassword());
         user.setPassword(md5Pass);
+        user.setUserId(UUIDUtil.genIdToUpperCase());
         // 把用户信息插入到数据库中。
         userMapper.insert(user);
         // 返回
         return new ResponseData("0000","success", null);
+    }
+
+    @Override
+    public ResponseData login(String userName, String password) {
+
+
+        return null;
     }
 }
