@@ -15,4 +15,6 @@ public interface UserSv {
     ResponseData checkData(String param, int type);
     ResponseData insertUser(TUser user);
     ResponseData login(String userName, String password);
+    ResponseData getUserByToken(String token);
+    ResponseData logon(String token);
 }

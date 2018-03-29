@@ -22,6 +22,10 @@ public class ResponseData implements Serializable {
         this.data = data;
     }
 
+    public static ResponseData init(String code, String msg, String data) {
+        return new ResponseData(code, msg, data);
+    }
+
     public String getCode() {
         return code;
     }
