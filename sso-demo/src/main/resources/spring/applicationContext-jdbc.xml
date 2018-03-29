@@ -19,15 +19,9 @@
            http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
            http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd"
            >
-           
-    <!-- 配置数据源 -->       
-    <bean id="jdbcConfig"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="order" value="1" />
-		<property name="ignoreUnresolvablePlaceholders" value="true" />
-		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
-		<property name="locations" value="classpath:context/project.properties" />
-	</bean>
+
+    <!-- 加载配置文件 -->
+    <context:property-placeholder location="classpath:context/*.properties" />
   
     <!--  配置数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">

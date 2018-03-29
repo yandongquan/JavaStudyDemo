@@ -15,4 +15,6 @@
 
 	<!-- 数据源，事务配置 -->  
 	<import resource="applicationContext-jdbc.xml"/>
+	<!-- Redis配置 -->
+	<import resource="applicationContext-redis.xml"/>
 </beans>
