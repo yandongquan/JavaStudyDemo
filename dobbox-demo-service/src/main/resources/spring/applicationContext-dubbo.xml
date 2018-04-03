@@ -13,5 +13,4 @@
     <dubbo:registry address="zookeeper://192.168.0.115:2181" />
     <dubbo:annotation package="com.javazk.api" />
     <dubbo:protocol name="rest" server="tomcat" port="8888" contextpath="provider" accepts="500" />
-
 </beans>

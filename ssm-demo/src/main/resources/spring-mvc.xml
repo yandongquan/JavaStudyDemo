@@ -15,17 +15,29 @@
         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-	<mvc:annotation-driven>
-		<!-- 消息转换器,解决responseBody返回中外乱码问题 -->
+	<mvc:annotation-driven/>
+	<!--<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
-				<property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+						<value>text/plain;charset=UTF-8</value>
+						<value>application/xml;charset=UTF-8</value>
+					</list>
+				</property>
 			</bean>
 		</mvc:message-converters>
-	</mvc:annotation-driven>
+	</mvc:annotation-driven>-->
+	<!--<mvc:annotation-driven>
+            <mvc:message-converters register-defaults="true">
+				<bean  class="com.javazhan.controller.UTF8StringHttpMessageConverter"/>
+            </mvc:message-converters>
+	</mvc:annotation-driven>-->
 
 	<!-- 静态资源配置   -->
-	<mvc:resources mapping="/static/**" location="/static/"/>
+	<!--<mvc:resources mapping="/static/**" location="/static/"/>-->
 
 	<!-- 视图解析器 -->
 	<bean id="viewResolver"

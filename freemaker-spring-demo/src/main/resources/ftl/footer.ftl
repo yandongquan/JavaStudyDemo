@@ -1,1 +1,1 @@
-<p>这是个footer @ 版权归 <a href="http://yandongquan.xin">yandongquan个人博客</a></p>
+<p>这是个footer @ 版权归 <a href="https://blog.csdn.net/wenteryan">个人博客</a></p>
