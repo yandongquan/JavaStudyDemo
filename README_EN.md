@@ -15,6 +15,12 @@
 * [x] [cas-demo1](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo1)：cas-demo client1
 * [x] [cas-demo2](https://github.com/yandongquan/JavaStudyDemo/tree/master/cas-demo2)：cas-demo client2
 * [x] [freemarker-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/freemarker-demo)：freemarker generate static pages
+* [x] [freemarker-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/freemarker-spring-demo)
+* [x] [activemq-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-demo)
+* [x] [activemq-producer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-producer-spring-demo)
+* [x] [activemq-consumer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-consumer-spring-demo)
+* [x] [sso-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/sso-demo)
+
 * [ ] AngularJS-demo：AngularJS demo
 * [ ] Stay tuned
 
