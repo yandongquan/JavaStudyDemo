@@ -2,7 +2,7 @@ package com.javakz;
 
 /**
  * @Author: yandq
- * @Description:
+ * @Description: 单例模式-懒汉式
  * @Date: Create in 10:24 2018/4/24
  * @Modified By:
  */
