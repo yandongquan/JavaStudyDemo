@@ -20,6 +20,7 @@
 * [x] [activemq-producer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-producer-spring-demo)
 * [x] [activemq-consumer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-consumer-spring-demo)
 * [x] [sso-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/sso-demo)
+* [x] [java-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/java-demo)：java-demo
 
 * [ ] AngularJS-demo：AngularJS demo
 * [ ] Stay tuned
