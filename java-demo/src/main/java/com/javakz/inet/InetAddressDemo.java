@@ -11,6 +11,7 @@ import java.net.UnknownHostException;
  */
 public class InetAddressDemo {
     public static void main(String[] args) throws UnknownHostException {
+
         // 使用getLocalHost方法创建InetAddress对象
         InetAddress addr = InetAddress.getLocalHost();
         System.out.println(addr.getHostAddress());
