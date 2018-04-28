@@ -7,6 +7,7 @@ package com.javakz;
  * @Modified By:
  */
 public class HungrySington {
+
     /**
      * 直接创建对象
      */
