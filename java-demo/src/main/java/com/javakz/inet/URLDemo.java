@@ -26,15 +26,17 @@ public class URLDemo {
         System.out.println("参数："+url.getQuery());*/
 
         // 获取资源
-        URL url = new URL("https://www.zbj.com");
+        /*URL url = new URL("https://www.zbj.com");
         // 获取资源需要网络流
-        /*InputStream is = url.openStream();
+        InputStream is = url.openStream();
         byte[] flush = new byte[1024];
         int len = 0;
         while (-1 != (len = is.read(flush))) {
             System.out.println(new String(flush, 0, len));
         }
         is.close();*/
+
+        URL url = new URL("https://www.zbj.com");
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
         String msg = "";
