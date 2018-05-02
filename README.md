@@ -24,6 +24,7 @@
 * [x] [activemq-consumer-spring-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/activemq-consumer-spring-demo)：activemq整合Spring demo consumer端
 * [x] [sso-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/sso-demo)：使用cookie+redis实现单点登录
 * [x] [java-demo](https://github.com/yandongquan/JavaStudyDemo/tree/master/java-demo)：java基础例子
+
 * [ ] AngularJS-demo：AngularJS demo
 
 * [ ] 敬请期待
