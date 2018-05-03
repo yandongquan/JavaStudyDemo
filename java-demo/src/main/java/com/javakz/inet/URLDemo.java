@@ -43,6 +43,7 @@ public class URLDemo {
         while ((msg=bufferedReader.readLine())!=null) {
             System.out.println(msg);
         }
+
         bufferedReader.close();
 
     }
