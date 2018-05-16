@@ -7,7 +7,6 @@ package com.javakz;
  * @Modified By:
  */
 public class Singleton {
-
     /**
      * 声明变量
      */
