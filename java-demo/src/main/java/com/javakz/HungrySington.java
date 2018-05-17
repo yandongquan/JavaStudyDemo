@@ -8,14 +8,10 @@ package com.javakz;
  */
 public class HungrySington {
 
-    /**
-     * 直接创建对象
-     */
+    /** 直接创建对象 */
     private static HungrySington hungrySington = new HungrySington();
 
-    /**
-     * 私有化构造方法
-     */
+    /** 私有化构造方法 */
     private HungrySington(){}
 
     /**
