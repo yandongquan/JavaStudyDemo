@@ -2,7 +2,7 @@ package com.javakz.thread;
 
 /**
  * @Author: yandq
- * @Description:
+ * @Description: 消费者线程
  * @Date: Create in 16:35 2018/5/24
  * @Modified By:
  */
