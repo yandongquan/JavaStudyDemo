@@ -2,7 +2,7 @@ package com.javakz;
 
 /**
  * @Author: yandq
- * @Description: 单利模式-饿汉式
+ * @Description: 单例模式-饿汉式
  * @Date: Create in 10:19 2018/4/24
  * @Modified By:
  */
