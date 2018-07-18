@@ -58,6 +58,11 @@ null值的处理：
     list2 不为 null
 </#if>
 
+<#if goodId[2..11] == '2018071101'>
+2018071101
+<#else>
+${goodId}
+</#if>
 <br>
 8）Include 标签
 <#include "footer.ftl"/>

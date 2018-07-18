@@ -70,6 +70,10 @@ public class FreemarkerTest {
         // 7）Null 值的处理
         root.put("list", null);
 
+        String goodId = "112018071101";
+
+        root.put("goodId",goodId);
+
         // 创建一个Writer对象，指定生成的文件保存的路径及文件名。
         Writer out = new FileWriter(new File("D:\\Work\\Workspaces\\IdeaProjects\\Git\\JavaStudyDemo\\freemarker-demo\\src\\main\\resources\\html\\hello.html"));
         // 调用模板对象的process方法生成静态文件。需要两个参数数据集和writer对象。
